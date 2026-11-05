@@ -186,8 +186,12 @@ export async function handleApi(req: ApiReq): Promise<ApiRes> {
 
     if (route === "/api/process" && req.method === "POST") {
       if (!rateLimit(`process:${req.ip}`, 6, 60_000)) return json(429, { error: "rate_limited" });
-      const store = await processSettledRounds();
-      return json(200, { processed: store.processedIds.slice(-8), boss: store.boss });
+      try {
+        const store = await processSettledRounds();
+        return json(200, { processed: store.processedIds.slice(-8), boss: store.boss });
+      } catch (err) {
+        return json(502, { error: "upstream", detail: String(err) });
+      }
     }
 
     if (route === "/api/save" && req.method === "GET") {
@@ -243,8 +247,12 @@ export async function handleApi(req: ApiReq): Promise<ApiRes> {
         const ua = req.headers["user-agent"] ?? "";
         if (!ua.includes("vercel-cron")) return json(401, { error: "unauthorized" });
       }
-      const store = await processSettledRounds();
-      return json(200, { ok: true, through: store.processedIds.at(-1) ?? null });
+      try {
+        const store = await processSettledRounds();
+        return json(200, { ok: true, through: store.processedIds.at(-1) ?? null });
+      } catch (err) {
+        return json(502, { error: "upstream", detail: String(err) });
+      }
     }
 
     return json(404, { error: "not_found", route });

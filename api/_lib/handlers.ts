@@ -4,22 +4,22 @@ import {
   ROUND_DURATION_SEC,
   roundStartUnix,
   weekIndexFromRound,
-} from "../../src/lib/constants";
-import { bossForWeek } from "../../src/lib/bosses";
-import { playerWeight } from "../../src/lib/damage";
-import { pickLastHit } from "../../src/lib/lastHit";
+} from "../../src/lib/constants.js";
+import { bossForWeek } from "../../src/lib/bosses.js";
+import { playerWeight } from "../../src/lib/damage.js";
+import { pickLastHit } from "../../src/lib/lastHit.js";
 import {
   buildSignMessage,
   randomNonce,
   verifySignedIntent,
   type SignedIntent,
-} from "../../src/lib/signatures";
-import { currentRoundNow, readAccount } from "./chain";
-import { processSettledRounds, refreshStatus, weeklyLeaderboard } from "./process";
-import { applySurge } from "../../src/lib/processRound";
-import { rateLimit } from "./rateLimit";
-import { ensureProfile, loadStore, saveStore } from "./store";
-import type { ApiReq, ApiRes } from "./types";
+} from "../../src/lib/signatures.js";
+import { currentRoundNow, readAccount } from "./chain.js";
+import { processSettledRounds, refreshStatus, weeklyLeaderboard } from "./process.js";
+import { applySurge } from "../../src/lib/processRound.js";
+import { rateLimit } from "./rateLimit.js";
+import { ensureProfile, loadStore, persistInfo, saveStore } from "./store.js";
+import type { ApiReq, ApiRes } from "./types.js";
 
 const CORS = {
   "access-control-allow-origin": "*",
@@ -53,7 +53,9 @@ export async function handleApi(req: ApiReq): Promise<ApiRes> {
       const start = roundStartUnix(currentRound);
       const endsAt = start + ROUND_DURATION_SEC;
       const ready = store.ready[String(currentRound)] ?? [];
+      const persist = persistInfo();
       return json(200, {
+        ...persist,
         status: store.lastStatus,
         week,
         currentRound,
@@ -247,6 +249,8 @@ export async function handleApi(req: ApiReq): Promise<ApiRes> {
 
     return json(404, { error: "not_found", route });
   } catch (err) {
-    return json(400, { error: "bad_request", detail: String(err) });
+    const msg = String(err);
+    const bad = /missing_intent|invalid|JSON|Address/i.test(msg);
+    return json(bad ? 400 : 500, { error: bad ? "bad_request" : "internal", detail: msg });
   }
 }

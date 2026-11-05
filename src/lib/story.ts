@@ -1,5 +1,5 @@
-import { classifyWork } from "./constants";
-import type { HeroClass } from "./classes";
+import { classifyWork } from "./constants.js";
+import type { HeroClass } from "./classes.js";
 
 export type StoryInput = {
   roundId: number;

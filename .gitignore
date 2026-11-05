@@ -23,3 +23,5 @@ docs/qa/**/*.webm
 docs/qa/raw/
 docs/qa/pass7/black/r*.png
 qa-screens/*.webm
+
+.vercel

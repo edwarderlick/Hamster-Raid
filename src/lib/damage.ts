@@ -1,4 +1,4 @@
-import { BASE_WEIGHT, LEVEL_WEIGHT, MAX_LEVEL } from "./constants";
+import { BASE_WEIGHT, LEVEL_WEIGHT, MAX_LEVEL } from "./constants.js";
 
 export type WeightedPlayer = {
   address: string;

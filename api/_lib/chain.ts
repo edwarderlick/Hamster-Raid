@@ -8,9 +8,9 @@ import {
   CORE_ADDRESS,
   GENESIS_TIMESTAMP,
   ROUND_DURATION_SEC,
-} from "../../src/lib/constants";
-import { classFromTokenId, pickHeroSqueek } from "../../src/lib/classes";
-import type { CachedStatus } from "./types";
+} from "../../src/lib/constants.js";
+import { classFromTokenId, pickHeroSqueek } from "../../src/lib/classes.js";
+import type { CachedStatus } from "./types.js";
 
 const client = createPublicClient({
   chain: sepolia,

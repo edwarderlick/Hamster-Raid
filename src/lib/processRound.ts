@@ -1,6 +1,6 @@
-import { ENRAGE_PER_NAP, MAX_ENRAGE, NAP_HEAL, WEEKLY_BOSS_HP } from "./constants";
-import { outgoingDamage, splitDamage, type WeightedPlayer } from "./damage";
-import { pickLastHit } from "./lastHit";
+import { ENRAGE_PER_NAP, MAX_ENRAGE, NAP_HEAL, WEEKLY_BOSS_HP } from "./constants.js";
+import { outgoingDamage, splitDamage, type WeightedPlayer } from "./damage.js";
+import { pickLastHit } from "./lastHit.js";
 
 export type BossState = {
   week: number;

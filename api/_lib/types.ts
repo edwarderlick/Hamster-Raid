@@ -1,6 +1,6 @@
-import type { HeroClass } from "../../src/lib/classes";
-import type { AchievementId } from "../../src/lib/achievements";
-import type { BossState, ProcessedRound } from "../../src/lib/processRound";
+import type { HeroClass } from "../../src/lib/classes.js";
+import type { AchievementId } from "../../src/lib/achievements.js";
+import type { BossState, ProcessedRound } from "../../src/lib/processRound.js";
 
 export type ApiReq = {
   method: string;

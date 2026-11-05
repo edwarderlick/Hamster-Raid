@@ -1,1 +1,1 @@
-export { handleApi } from "./handlers";
+export { handleApi } from "./handlers.js";

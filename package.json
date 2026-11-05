@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "description": "Hamster Raid — a Squeekchain raid game driven by Squeektoshi's real wheel work.",
   "scripts": {
     "dev": "vite",

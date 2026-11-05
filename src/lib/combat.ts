@@ -1,4 +1,4 @@
-import { clampLevel } from "./damage";
+import { clampLevel } from "./damage.js";
 
 export const COMBO_MUL = [1, 1.18, 1.42];
 

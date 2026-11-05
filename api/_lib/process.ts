@@ -1,11 +1,11 @@
-import { classifyWork, weekIndexFromRound, WEEKLY_BOSS_HP } from "../../src/lib/constants";
-import { bossForWeek } from "../../src/lib/bosses";
-import { writeBeat } from "../../src/lib/story";
-import { applyRound, freshBoss } from "../../src/lib/processRound";
-import { COSMETICS, type AchievementId } from "../../src/lib/achievements";
-import { fetchBatchFrontier, fetchCoreEvents, fetchStatus } from "./chain";
-import { ensureProfile, loadStore, saveStore } from "./store";
-import type { Store } from "./types";
+import { classifyWork, weekIndexFromRound, WEEKLY_BOSS_HP } from "../../src/lib/constants.js";
+import { bossForWeek } from "../../src/lib/bosses.js";
+import { writeBeat } from "../../src/lib/story.js";
+import { applyRound, freshBoss } from "../../src/lib/processRound.js";
+import { COSMETICS, type AchievementId } from "../../src/lib/achievements.js";
+import { fetchBatchFrontier, fetchCoreEvents, fetchStatus } from "./chain.js";
+import { ensureProfile, loadStore, saveStore } from "./store.js";
+import type { Store } from "./types.js";
 
 function llmConfig() {
   const key = process.env.LLM_API_KEY;

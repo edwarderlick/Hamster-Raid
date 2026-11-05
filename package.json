@@ -1,0 +1,39 @@
+{
+  "name": "hamster-raid",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Hamster Raid — a Squeekchain raid game driven by Squeektoshi's real wheel work.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "qa": "playwright test --config=playwright.config.ts",
+    "record:demo": "playwright test --config=playwright.config.ts qa/record-demo.spec.ts"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.59.0",
+    "framer-motion": "^11.11.0",
+    "phaser": "^3.80.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "viem": "^2.21.0",
+    "wagmi": "^2.12.0",
+    "zustand": "^5.0.16"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.7.0",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "vitest": "^2.1.2"
+  }
+}

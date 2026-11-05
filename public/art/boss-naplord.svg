@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#070b1a"/>
+  <ellipse cx="200" cy="230" rx="120" ry="90" fill="#121a36"/>
+  <circle cx="200" cy="170" r="80" fill="#1a2550" stroke="#2ee9ff" stroke-width="4"/>
+  <path d="M120 150 Q200 40 280 150" fill="#0b1228" stroke="#7af6ff" stroke-width="3"/>
+  <circle cx="170" cy="170" r="10" fill="#2ee9ff"/>
+  <circle cx="230" cy="170" r="10" fill="#2ee9ff"/>
+  <rect x="160" y="210" width="80" height="10" rx="4" fill="#ff8a1f"/>
+  <text x="200" y="360" text-anchor="middle" fill="#7af6ff" font-size="18" font-family="sans-serif">The Naplord</text>
+</svg>

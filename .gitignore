@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.vercel/
+.data/
+coverage/
+playwright-report/
+blob-report/
+test-results/
+playwright/.cache/
+tsconfig.tsbuildinfo
+
+.env
+.env.*
+!.env.example
+
+*.log
+*.local
+.DS_Store
+Thumbs.db
+
+# Large QA captures (keep stills that README links)
+docs/qa/**/*.webm
+docs/qa/raw/
+docs/qa/pass7/black/r*.png
+qa-screens/*.webm

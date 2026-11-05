@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#050814"/>
+  <path d="M80 300 C 40 180, 160 80, 200 160 S 360 80, 320 220 S 180 360, 80 300" fill="none" stroke="#8b5cf6" stroke-width="16"/>
+  <circle cx="200" cy="200" r="36" fill="#12081c" stroke="#c084fc" stroke-width="4"/>
+  <circle cx="188" cy="194" r="6" fill="#ff8a1f"/>
+  <circle cx="214" cy="194" r="6" fill="#ff8a1f"/>
+  <text x="200" y="370" text-anchor="middle" fill="#c084fc" font-size="18" font-family="sans-serif">The Night Coil</text>
+</svg>

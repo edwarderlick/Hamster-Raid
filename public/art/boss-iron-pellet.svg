@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#070b1a"/>
+  <circle cx="200" cy="190" r="110" fill="#3a2a1a" stroke="#ffb347" stroke-width="8"/>
+  <circle cx="200" cy="190" r="70" fill="#1a120c"/>
+  <circle cx="200" cy="190" r="28" fill="#ff8a1f"/>
+  <circle cx="160" cy="160" r="12" fill="#ffb347"/>
+  <circle cx="240" cy="210" r="9" fill="#e56a00"/>
+  <text x="200" y="360" text-anchor="middle" fill="#ffb347" font-size="18" font-family="sans-serif">Iron Pellet</text>
+</svg>

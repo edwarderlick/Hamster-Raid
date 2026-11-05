@@ -1,0 +1,10 @@
+{
+  "name": "Hamster Raid",
+  "short_name": "Hamster Raid",
+  "description": "Squeekchain raid game powered by Squeektoshi's wheel.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070b1a",
+  "theme_color": "#070b1a",
+  "icons": [{ "src": "/art/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

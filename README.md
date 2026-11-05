@@ -1,5 +1,7 @@
 # Hamster Raid: Wheelbound
 
+squeekchain-project: cd2bff1a-2b09-4e5d-b421-f08e2c99b5fd
+
 A 2D top-down action RPG in the browser, powered by a **real hamster wheel**.
 
 Squeektoshi runs on [Squeekchain](https://squeekchain.com). When he runs, Wheelhaven’s gears turn, doors open, and your Wheel Charge fills. When he naps, the foundry goes dim and the Gearmaw drinks the quiet. This is a game, not a dashboard: personal combat is real-time; Wheel Surge also ticks a weekly **global** boss bar from settled wheel work.
